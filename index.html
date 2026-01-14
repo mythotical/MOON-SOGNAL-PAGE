@@ -1,221 +1,117 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="theme-color" content="#07040D" />
+  <meta charset="utf-8">
   <title>Moon Signal — Trade decisions, not hype.</title>
-  <meta name="description" content="Risk-aware signals, early rug protection, and execution discipline. Chrome extension for serious traders." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./assets/styles.css" />
-  <link rel="icon" href="./assets/icon.png" />
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#07040D">
+  <link rel="icon" href="./assets/icon.png">
+  <link rel="stylesheet" href="./assets/styles.css">
 </head>
 <body>
-  <div class="bg"></div>
 
-  <header class="top">
-    <div class="wrap top__inner">
-      <a class="brand" href="/">
-        <span class="brand__mark" aria-hidden="true"></span>
-        <span class="brand__name">Moon Signal</span>
-      </a>
-      <nav class="nav">
-        <a href="#pricing">Pricing</a>
-        <a href="#how">How it works</a>
-        <a href="#faq">FAQ</a>
-      </nav>
-      <a class="btn btn--ghost" href="#pricing">Get Access</a>
+<div class="bg"></div>
+
+<header class="top">
+  <div class="wrap top-inner">
+    <a class="brand" href="#">
+      <span class="brand-mark">
+        <img src="./assets/logo.png" alt="Moon Signal">
+      </span>
+      <span class="brand-name">Moon Signal</span>
+    </a>
+
+    <nav class="nav">
+      <a href="#pricing">Pricing</a>
+      <a href="#how">How it works</a>
+    </nav>
+
+    <a class="btn primary" href="#pricing">Get Access</a>
+  </div>
+</header>
+
+<main class="wrap">
+
+<section class="hero">
+  <div class="hero-left">
+    <span class="chip">Chrome Extension • Risk-aware signals</span>
+    <h1>Trade decisions,<br>not hype.</h1>
+    <p>
+      Moon Signal helps you decide <b>when to enter — and when not to</b>.
+      Built for disciplined execution with early rug protection.
+    </p>
+
+    <div class="cta">
+      <a class="btn primary" href="#pricing">View pricing</a>
+      <a class="btn" href="#">Chrome Web Store</a>
     </div>
-  </header>
+  </div>
 
-  <main class="wrap">
-    <section class="hero">
-      <div class="hero__left">
-        <div class="chip">Chrome Extension • Risk-aware signals</div>
-        <h1>Trade decisions, not hype.</h1>
-        <p class="lead">
-          Moon Signal helps you decide <strong>when to enter — and when not to</strong>.
-          Built for disciplined execution with early rug protection.
-        </p>
+  <div class="panel">
+    <h3>What you get</h3>
+    <ul>
+      <li>ENTER / BLOCKED / RUG decisions</li>
+      <li>Early rug escalation detection</li>
+      <li>Background alerts</li>
+      <li>Wallet activity alerts (buy-only)</li>
+      <li>Optional automation (ELITE)</li>
+    </ul>
+  </div>
+</section>
 
-        <div class="hero__cta">
-          <a class="btn btn--primary" href="#pricing">View pricing</a>
-          <a class="btn btn--ghost" href="#how">See how it works</a>
-        </div>
+<section id="pricing">
+  <h2>Pricing</h2>
 
-        <div class="hero__meta">
-          <div class="meta">
-            <div class="meta__k">Designed for</div>
-            <div class="meta__v">Serious operators</div>
-          </div>
-          <div class="meta">
-            <div class="meta__k">Bias</div>
-            <div class="meta__v">Capital protection</div>
-          </div>
-          <div class="meta">
-            <div class="meta__k">Style</div>
-            <div class="meta__v">Calm, terminal-grade</div>
-          </div>
-        </div>
-      </div>
+  <div class="cards">
+    <div class="card">
+      <h3>CORE</h3>
+      <p class="price">$29/mo</p>
+      <ul>
+        <li>Full overlay</li>
+        <li>Manual execution</li>
+        <li>Early rug warnings</li>
+      </ul>
+      <a class="btn" href="#">Get CORE</a>
+    </div>
 
-      <div class="hero__right">
-        <div class="panel">
-          <div class="panel__title">What you get</div>
-          <ul class="bullets">
-            <li><strong>ENTER / BLOCKED / RUG</strong> with clear context</li>
-            <li><strong>Early rug escalation</strong> when distribution appears</li>
-            <li><strong>Alerts</strong> that respect cooldowns and escalation</li>
-            <li><strong>Wallet Activity</strong> alerts (buy-only)</li>
-            <li><strong>Optional automation</strong> (ELITE)</li>
-          </ul>
-          <div class="panel__note">
-            No performance promises. No hype language. Just disciplined decision support.
-          </div>
-        </div>
-      </div>
-    </section>
+    <div class="card featured">
+      <h3>PRO</h3>
+      <p class="price">$60/mo</p>
+      <ul>
+        <li>Background alerts</li>
+        <li>READY → ENTER escalation</li>
+        <li>Wallet alerts</li>
+      </ul>
+      <a class="btn primary" href="#">Get PRO</a>
+    </div>
 
-    <section id="pricing" class="section">
-      <div class="section__head">
-        <h2>Pricing</h2>
-        <p class="muted">Three tiers. Choose your level of control.</p>
-      </div>
+    <div class="card">
+      <h3>ELITE</h3>
+      <p class="price">$120/mo</p>
+      <ul>
+        <li>Sniper automation</li>
+        <li>Priority updates</li>
+      </ul>
+      <a class="btn" href="#">Get ELITE</a>
+    </div>
+  </div>
+</section>
 
-      <div class="grid3">
-        <article class="card">
-          <div class="card__top">
-            <div class="card__name">CORE</div>
-            <div class="card__price">$29<span>/mo</span></div>
-            <div class="card__desc">For disciplined manual traders.</div>
-          </div>
-          <ul class="list">
-            <li>Full overlay: ENTER / BLOCKED / RUG</li>
-            <li>Confidence, signal strength, timing</li>
-            <li>Early rug protection</li>
-            <li>Manual use (no background alerts)</li>
-            <li>Dexscreener coverage</li>
-          </ul>
-          <a class="btn btn--ghost btn--full" data-plan="core" href="REPLACE_WITH_STRIPE_CHECKOUT_CORE">Get CORE</a>
-          <div class="fine">Best for: low-noise manual execution.</div>
-        </article>
+<section id="how">
+  <h2>How it works</h2>
+  <ol>
+    <li>Install the Chrome extension</li>
+    <li>Subscribe & receive a license key</li>
+    <li>Paste key to unlock features</li>
+  </ol>
+</section>
 
-        <article class="card card--featured">
-          <div class="badge">Most Popular</div>
-          <div class="card__top">
-            <div class="card__name">PRO</div>
-            <div class="card__price">$60<span>/mo</span></div>
-            <div class="card__desc">For active traders who want alerts + monitoring.</div>
-          </div>
-          <ul class="list">
-            <li>Everything in CORE</li>
-            <li>Background alerts: READY / ENTER / RUG</li>
-            <li>READY → ENTER escalation</li>
-            <li>Multi-pair monitoring (up to 10)</li>
-            <li>Wallet Activity alerts (buy-only)</li>
-            <li>Copy CA execution helper</li>
-            <li>Dexscreener + Axiom coverage</li>
-          </ul>
-          <a class="btn btn--primary btn--full" data-plan="pro" href="REPLACE_WITH_STRIPE_CHECKOUT_PRO">Get PRO</a>
-          <div class="fine">Best for: disciplined speed + protection.</div>
-        </article>
+<footer>
+  <p>Moon Signal — Decision support only. Not financial advice.</p>
+</footer>
 
-        <article class="card">
-          <div class="card__top">
-            <div class="card__name">ELITE</div>
-            <div class="card__price">$120<span>/mo</span></div>
-            <div class="card__desc">For speed & automation.</div>
-          </div>
-          <ul class="list">
-            <li>Everything in PRO</li>
-            <li>Sniper mode (opt-in automation)</li>
-            <li>Priority updates</li>
-          </ul>
-          <a class="btn btn--ghost btn--full" data-plan="elite" href="REPLACE_WITH_STRIPE_CHECKOUT_ELITE">Get ELITE</a>
-          <div class="fine">Best for: advanced operators only.</div>
-        </article>
-      </div>
+</main>
 
-      <div class="callout">
-        <div class="callout__title">After payment</div>
-        <div class="callout__body">
-          You’ll receive a <strong>license key</strong>. Paste it inside the extension to unlock your tier.
-        </div>
-      </div>
-    </section>
-
-    <section id="how" class="section">
-      <div class="section__head">
-        <h2>How it works</h2>
-        <p class="muted">Simple, fast, and designed for calm execution.</p>
-      </div>
-
-      <div class="steps">
-        <div class="step">
-          <div class="step__n">1</div>
-          <div class="step__t">Install</div>
-          <div class="step__p">Add Moon Signal from the Chrome Web Store.</div>
-        </div>
-        <div class="step">
-          <div class="step__n">2</div>
-          <div class="step__t">Subscribe</div>
-          <div class="step__p">Pick a tier and check out securely with Stripe.</div>
-        </div>
-        <div class="step">
-          <div class="step__n">3</div>
-          <div class="step__t">Activate</div>
-          <div class="step__p">Paste your license key in the extension to unlock features.</div>
-        </div>
-      </div>
-    </section>
-
-    <section id="faq" class="section">
-      <div class="section__head">
-        <h2>FAQ</h2>
-        <p class="muted">Clear answers. No hype.</p>
-      </div>
-
-      <div class="faq">
-        <details>
-          <summary>Does Moon Signal guarantee profits?</summary>
-          <div class="faq__a">No. Moon Signal is decision support. It helps you act with discipline and avoid obvious risk, but markets can’t be guaranteed.</div>
-        </details>
-        <details>
-          <summary>Is this financial advice?</summary>
-          <div class="faq__a">No. Moon Signal provides signals and risk context. You are responsible for your trades.</div>
-        </details>
-        <details>
-          <summary>What happens if I cancel?</summary>
-          <div class="faq__a">Your subscription ends at the end of the billing period. Your license will stop validating once it expires.</div>
-        </details>
-        <details>
-          <summary>How do license keys work?</summary>
-          <div class="faq__a">After checkout, you receive a license key tied to your plan. The extension validates it with the backend to unlock tier features.</div>
-        </details>
-      </div>
-    </section>
-
-    <footer class="footer">
-      <div class="footer__left">
-        <div class="brand brand--small">
-          <span class="brand__mark" aria-hidden="true"></span>
-          <span class="brand__name">Moon Signal</span>
-        </div>
-        <div class="fine muted">
-          Decision-support tool. Not financial advice. No performance guarantees.
-        </div>
-      </div>
-
-      <div class="footer__right">
-        <a href="./privacy.html">Privacy</a>
-        <a href="./terms.html">Terms</a>
-        <a href="mailto:REPLACE_WITH_SUPPORT_EMAIL">Support</a>
-      </div>
-    </footer>
-  </main>
-
-  <script src="./assets/site.js"></script>
+<script src="./assets/site.js"></script>
 </body>
 </html>
