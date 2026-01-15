@@ -1,469 +1,130 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Moon Signal — Trade decisions, not hype.</title>
-  
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<meta name="theme-color" content="#07070a"/>
-<link rel="icon" href="/assets/icon.png"/>
-<link rel="preload" href="/css/styles.css" as="style"/>
-<link rel="stylesheet" href="/css/styles.css"/>
-<meta name="description" content="Moon Signal is a calm, risk-aware decision overlay for Dexscreener and Axiom. Trade decisions, not hype."/>
-<meta property="og:title" content="Moon Signal — Trade decisions, not hype."/>
-<meta property="og:description" content="Risk-aware signals with invalidation and rug-risk context. Built for serious operators."/>
-<meta property="og:type" content="website"/>
-<meta property="og:image" content="/assets/icon.png"/>
-<meta property="og:url" content="https://moonsignal.xyz"/>
 
-  <script type="application/ld+json">
-  {
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "Moon Signal",
-  "applicationCategory": "BrowserApplication",
-  "operatingSystem": "Chrome",
-  "description": "Risk-aware decision overlay for Dexscreener and Axiom with invalidation and rug-risk context.",
-  "offers": [
-    {
-      "@type": "Offer",
-      "price": "29",
-      "priceCurrency": "USD",
-      "description": "CORE \u2014 manual"
-    },
-    {
-      "@type": "Offer",
-      "price": "60",
-      "priceCurrency": "USD",
-      "description": "PRO \u2014 alerts + monitoring"
-    },
-    {
-      "@type": "Offer",
-      "price": "120",
-      "priceCurrency": "USD",
-      "description": "ELITE \u2014 automation"
-    }
-  ]
-}
-  </script>
+  <!-- CSS -->
+  <link rel="stylesheet" href="./styles.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="./icon.png" />
+
+  <!-- SEO -->
+  <meta name="description" content="Moon Signal is a calm, risk-aware decision overlay for Dexscreener. Trade decisions, not hype." />
+
+  <!-- OpenGraph -->
+  <meta property="og:title" content="Moon Signal — Trade decisions, not hype." />
+  <meta property="og:description" content="Risk-aware signals with invalidation and rug context. Built for serious operators." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="./icon.png" />
 </head>
+
 <body>
-  <div class="grain" aria-hidden="true"></div>
+  <!-- Grain overlay -->
+  <div class="grain"></div>
 
+  <!-- NAV -->
   <header class="nav">
-    <div class="container">
-      <div class="nav-inner">
-        <a class="brand" href="/">
-          <div class="logo" aria-hidden="true"></div>
-          <div>
-            <h1>Moon Signal</h1>
-            <span>terminal-grade / risk-aware</span>
-          </div>
-        </a>
-
-        <nav class="nav-links" aria-label="Primary">
-          <a href="#how">How it works</a>
-          <a href="#features">Features</a>
-          <a href="#pricing">Pricing</a>
-          <a href="#faq">FAQ</a>
-        </nav>
-
-        <div class="cta-row">
-          <a class="btn btn-ghost" href="#pricing">View pricing</a>
-          <button class="btn btn-primary" data-stripe-link="" aria-label="Checkout">Activate license</button>
-          <button class="btn mobile-toggle" data-mobile-toggle aria-expanded="false" aria-label="Open menu">Menu</button>
+    <div class="container nav-inner">
+      <div class="brand">
+        <div class="logo"></div>
+        <div>
+          <strong>Moon Signal</strong>
+          <span>terminal-grade / risk-aware</span>
         </div>
       </div>
-
-      <div class="mobile-menu" data-mobile-menu>
-        <a href="#how">How it works</a>
+      <nav>
         <a href="#features">Features</a>
         <a href="#pricing">Pricing</a>
         <a href="#faq">FAQ</a>
-        <a href="/privacy.html">Privacy</a>
-        <a href="/terms.html">Terms</a>
-      </div>
+      </nav>
     </div>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="container hero-grid">
-        <div>
-          <div class="kicker">built for serious operators</div>
-          <h2 class="h-title">Trade decisions, <br/>not hype.</h2>
-          <p class="h-sub">
-            Moon Signal overlays calm, risk-aware signals directly on supported pages —
-            with invalidation conditions and rug-risk context visible at all times.
-          </p>
+  <!-- HERO -->
+  <section class="hero container">
+    <h1>Trade decisions,<br>not hype.</h1>
+    <p class="subtitle">
+      Moon Signal gives you a calm, terminal-grade overlay that answers the only question that matters:
+      <strong>ENTER</strong>, <strong>BLOCKED</strong>, or <strong>RUG</strong>.
+    </p>
 
-          <div class="hero-actions">
-            <button class="btn btn-primary" data-stripe-link="">Activate license</button>
-            <a class="btn" href="#how">See how it works</a>
-            <a class="btn btn-ghost" href="#features">Explore features</a>
-          </div>
-
-          <div class="pills" aria-label="Positioning">
-            <div class="pill">capital protection first</div>
-            <div class="pill">invalidation on every signal</div>
-            <div class="pill">no performance promises</div>
-          </div>
-
-          <div class="note">
-            Informational tool only. Not financial advice. You control execution.
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-inner">
-            <div class="terminal" aria-label="Signal preview">
-              <div class="terminal-header">
-                <div class="dots" aria-hidden="true">
-                  <div class="dot"></div><div class="dot"></div><div class="dot"></div>
-                </div>
-                <span class="badge">overlay preview</span>
-              </div>
-              <div class="terminal-body">
-                <div class="line"><span>state</span><span class="badge badge-enter">ENTER</span></div>
-                <div class="line"><span>confidence</span><span>72%</span></div>
-                <div class="line"><span>timing</span><span>early</span></div>
-                <div class="line"><span>strength</span><span>moderate</span></div>
-                <div class="line"><span>rsk: distribution</span><span>watch</span></div>
-                <div class="line"><span>invalidation</span><span>loss of momentum + supply shift</span></div>
-              </div>
-            </div>
-
-            <div class="banner card" style="margin-top:14px;">
-              <div class="card-inner banner">
-                <div class="icon">Δ</div>
-                <div>
-                  <div class="title">Calm execution.</div>
-                  <p>Signals are presented with context and invalidation — not noise, not hype, not promises.</p>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="how">
-      <div class="container">
-        <h2>How it works</h2>
-        <p class="lead">
-          Moon Signal is a decision engine that surfaces three outcomes and the conditions behind them.
-          You always see what would invalidate the signal and why rug risk is elevated.
-        </p>
-
-        <div class="grid how-grid">
-          <div class="card step">
-            <div class="card-inner">
-              <div class="num">Step 01</div>
-              <h3>Overlay your charting workflow</h3>
-              <p>Signals render on supported pages with a movable, persistent overlay that respects your screen.</p>
-              <div class="pills">
-                <div class="pill">Dexscreener</div>
-                <div class="pill">Axiom</div>
-              </div>
-            </div>
-          </div>
-          <div class="card step">
-            <div class="card-inner">
-              <div class="num">Step 02</div>
-              <h3>See the decision and the “why”</h3>
-              <p>Confidence, timing, strength, invalidation conditions, and rug-risk context appear together — always.</p>
-              <div class="pills">
-                <div class="pill">ENTER / BLOCKED / RUG</div>
-                <div class="pill">invalidation visible</div>
-              </div>
-            </div>
-          </div>
-          <div class="card step">
-            <div class="card-inner">
-              <div class="num">Step 03</div>
-              <h3>Escalation & alerts (PRO)</h3>
-              <p>Watchlist alerts escalate READY → ENTER with cooldown and one-shot behavior per pair.</p>
-              <div class="pills">
-                <div class="pill">cooldown respected</div>
-                <div class="pill">one-shot alerts</div>
-              </div>
-            </div>
-          </div>
-          <div class="card step">
-            <div class="card-inner">
-              <div class="num">Step 04</div>
-              <h3>Opt-in automation (ELITE)</h3>
-              <p>Sniper Mode is opt-in and plan-gated. It is designed to fail safely, not aggressively.</p>
-              <div class="pills">
-                <div class="pill">opt-in only</div>
-                <div class="pill">safe failure modes</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="banner card" style="margin-top:18px;">
-          <div class="card-inner banner">
-            <div class="icon">i</div>
-            <div>
-              <div class="title">No promises.</div>
-              <p>
-                Moon Signal does not make performance claims. It surfaces risk-aware context to support your decisions.
-              </p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <section class="section" id="features">
-      <div class="container">
-        <h2>Features</h2>
-        <p class="lead">Everything is designed to be readable, trustworthy, and stable — with a single premium purple gradient.</p>
-
-        <div class="grid feature-grid">
-          <div class="card feature">
-            <div class="card-inner">
-              <div class="icon">◈</div>
-              <h3>Decision overlay</h3>
-              <p>Movable, persistent overlay designed to stay out of the way while you work.</p>
-            </div>
-          </div>
-          <div class="card feature">
-            <div class="card-inner">
-              <div class="icon">≋</div>
-              <h3>Signal context</h3>
-              <p>Confidence, timing, and strength displayed alongside the decision state.</p>
-            </div>
-          </div>
-          <div class="card feature">
-            <div class="card-inner">
-              <div class="icon">⊘</div>
-              <h3>Invalidation conditions</h3>
-              <p>Clear conditions that tell you what would break the signal — no guessing.</p>
-            </div>
-          </div>
-          <div class="card feature">
-            <div class="card-inner">
-              <div class="icon">▦</div>
-              <h3>Rug risk context</h3>
-              <p>Rug risk visualized with score bars and a risk bar — designed for quick scanning.</p>
-            </div>
-          </div>
-          <div class="card feature">
-            <div class="card-inner">
-              <div class="icon">⌁</div>
-              <h3>Watchlist alerts (PRO)</h3>
-              <p>READY → ENTER escalation, cooldown enforcement, and one-shot alerts per pair.</p>
-            </div>
-          </div>
-          <div class="card feature">
-            <div class="card-inner">
-              <div class="icon">⧉</div>
-              <h3>Wallet Activity (popup)</h3>
-              <p>Buy-only, new-token alerts per wallet per token — separated from core ENTER/RUG logic.</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <section class="section" id="pricing">
-      <div class="container">
-        <h2>Pricing</h2>
-        <p class="lead">
-          No free tier. One license key unlocks features inside the extension.
-          Checkout links can be wired to Stripe in one line.
-        </p>
-
-        <div class="grid pricing-grid">
-          <div class="card price">
-            <div class="card-inner">
-              <div class="tier">
-                <h3>CORE</h3>
-                <span class="badge">manual</span>
-              </div>
-              <div>
-                <div class="amount">$29<span class="per">/mo</span></div>
-                <div class="small">Manual overlay + decision context.</div>
-              </div>
-              <div class="grow">
-                <ul>
-                  <li>ENTER / BLOCKED / RUG states</li>
-                  <li>Confidence, timing, strength</li>
-                  <li>Invalidation conditions shown</li>
-                  <li>Rug risk visualization</li>
-                </ul>
-              </div>
-              <button class="btn" data-stripe-link="">Activate CORE</button>
-              <div class="small">Instant license key after checkout.</div>
-            </div>
-          </div>
-
-          <div class="card price" style="border-color: rgba(168,85,247,0.30);">
-            <div class="card-inner">
-              <div class="tier">
-                <h3>PRO</h3>
-                <span class="badge">alerts</span>
-              </div>
-              <div>
-                <div class="amount">$60<span class="per">/mo</span></div>
-                <div class="small">Monitoring + alerting layer.</div>
-              </div>
-              <div class="grow">
-                <ul>
-                  <li>Watchlist alerts: READY / ENTER / RUG</li>
-                  <li>Escalation: READY → ENTER</li>
-                  <li>Cooldown respected</li>
-                  <li>One-shot alerts per pair</li>
-                </ul>
-              </div>
-              <button class="btn btn-primary" data-stripe-link="">Activate PRO</button>
-              <div class="small">Instant license key after checkout.</div>
-            </div>
-          </div>
-
-          <div class="card price">
-            <div class="card-inner">
-              <div class="tier">
-                <h3>ELITE</h3>
-                <span class="badge">automation</span>
-              </div>
-              <div>
-                <div class="amount">$120<span class="per">/mo</span></div>
-                <div class="small">Opt-in automation for execution workflows.</div>
-              </div>
-              <div class="grow">
-                <ul>
-                  <li>Sniper Mode (opt-in)</li>
-                  <li>Plan-gated automation controls</li>
-                  <li>Designed to fail safely</li>
-                  <li>All PRO features included</li>
-                </ul>
-              </div>
-              <button class="btn" data-stripe-link="">Activate ELITE</button>
-              <div class="small">Instant license key after checkout.</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="banner card" style="margin-top:18px;">
-          <div class="card-inner banner">
-            <div class="icon">✓</div>
-            <div>
-              <div class="title">Activation is simple.</div>
-              <p>Pay via Stripe → receive a license key → paste into the extension → tier unlocks immediately.</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <section class="section" id="faq">
-      <div class="container">
-        <h2>FAQ</h2>
-        <p class="lead">Clear answers, no marketing fog.</p>
-
-        <div class="faq">
-          <div class="faq-item open">
-            <div class="faq-q">
-              <h3>Is Moon Signal financial advice?</h3>
-              <div class="badge">no</div>
-            </div>
-            <div class="faq-a">
-              Moon Signal is an informational tool. It provides risk-aware context to support your decisions. You are responsible for execution and risk.
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <div class="faq-q">
-              <h3>How do I activate after purchase?</h3>
-              <div class="badge">license key</div>
-            </div>
-            <div class="faq-a">
-              After checkout, you receive a license key. Paste it into the extension’s Settings → License section to unlock your plan.
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <div class="faq-q">
-              <h3>What does ENTER / BLOCKED / RUG mean?</h3>
-              <div class="badge">states</div>
-            </div>
-            <div class="faq-a">
-              ENTER indicates conditions align for execution; BLOCKED means conditions do not qualify; RUG indicates elevated rug risk based on on-chain / distribution behavior. The “why” and invalidation are shown in-app.
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <div class="faq-q">
-              <h3>Do you track my wallet?</h3>
-              <div class="badge">privacy</div>
-            </div>
-            <div class="faq-a">
-              Wallet Activity (if enabled) is clearly labeled and separate from core signals. See the Privacy Policy for details on what data is processed.
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <div class="faq-q">
-              <h3>Can I cancel anytime?</h3>
-              <div class="badge">billing</div>
-            </div>
-            <div class="faq-a">
-              Yes. Your subscription can be managed through Stripe. Access remains active through the end of the billing period.
-            </div>
-          </div>
-        </div>
-
-        <div class="note" style="margin-top:18px;">
-          Questions? Email <a href="mailto:support@moonsignal.xyz">support@moonsignal.xyz</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container footer-grid">
-      <div>
-        <div class="brand" style="min-width:auto;">
-          <div class="logo" aria-hidden="true" style="width:34px;height:34px;border-radius:12px;"></div>
-          <div>
-            <h1 style="font-size:13px;margin:0;">Moon Signal</h1>
-            <span style="font-size:12px;">Trade decisions, not hype.</span>
-          </div>
-        </div>
-        <div class="legal">
-          Informational only. Not financial advice. Trading involves risk.
-        </div>
-      </div>
-
-      <div>
-        <div style="font-family:var(--mono); font-size:12px; margin-bottom:10px; color: var(--muted2);">Navigation</div>
-        <a href="#how">How it works</a><br/>
-        <a href="#features">Features</a><br/>
-        <a href="#pricing">Pricing</a><br/>
-        <a href="#faq">FAQ</a>
-      </div>
-
-      <div>
-        <div style="font-family:var(--mono); font-size:12px; margin-bottom:10px; color: var(--muted2);">Legal</div>
-        <a href="/privacy.html">Privacy Policy</a><br/>
-        <a href="/terms.html">Terms of Service</a><br/>
-        <a href="mailto:support@moonsignal.xyz">Support</a>
-      </div>
+    <div class="cta-row">
+      <a class="btn primary" href="#pricing">View pricing</a>
+      <a class="btn" href="#features">What you get</a>
     </div>
 
-    <div class="container" style="margin-top:18px;">
-      <div class="hr"></div>
-      <div class="small">© 2026 Moon Signal. All rights reserved.</div>
+    <p class="note">
+      Informational only. Not financial advice. Decision support only.
+    </p>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features" class="section container">
+    <h2>What you get</h2>
+    <ul class="feature-list">
+      <li><strong>ENTER / BLOCKED / RUG</strong> with clear context + invalidation</li>
+      <li>Early rug escalation when distribution appears</li>
+      <li>Cooldown-safe alerts with READY → ENTER escalation</li>
+      <li>Wallet Activity alerts (buy-only, new tokens only)</li>
+      <li>Execution helpers: Copy CA, trade links, entry window</li>
+    </ul>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing" class="section container">
+    <h2>Pricing</h2>
+
+    <div class="pricing-grid">
+      <div class="card">
+        <h3>CORE</h3>
+        <p class="price">$29 / mo</p>
+        <ul>
+          <li>Manual overlay</li>
+          <li>ENTER / BLOCKED / RUG</li>
+          <li>Confidence + timing</li>
+          <li>Dexscreener coverage</li>
+        </ul>
+      </div>
+
+      <div class="card highlight">
+        <h3>PRO</h3>
+        <p class="price">$60 / mo</p>
+        <ul>
+          <li>Everything in CORE</li>
+          <li>Background alerts</li>
+          <li>READY → ENTER escalation</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>ELITE</h3>
+        <p class="price">$120 / mo</p>
+        <ul>
+          <li>Everything in PRO</li>
+          <li>Sniper automation (opt-in)</li>
+          <li>Fail-safe execution</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section container">
+    <h2>FAQ</h2>
+    <p><strong>Is this financial advice?</strong> No. Moon Signal is informational only.</p>
+    <p><strong>How do I activate?</strong> Purchase → receive license key → paste into extension.</p>
+    <p><strong>Can I cancel?</strong> Yes, anytime via Stripe.</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>© Moon Signal. Informational only. Not financial advice.</p>
     </div>
   </footer>
 
-  <script src="/js/main.js" defer></script>
 </body>
 </html>
