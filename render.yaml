@@ -1,6 +1,0 @@
-services:
-  - type: web
-    name: moon-signal-site
-    env: static
-    buildCommand: ""
-    staticPublishPath: .
