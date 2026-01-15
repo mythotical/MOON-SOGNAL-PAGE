@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: moon-signal-site
+    env: static
+    staticPublishPath: .
+    pullRequestPreviewsEnabled: true
